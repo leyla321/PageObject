@@ -38,9 +38,9 @@ public class RegistrationPage extends AbsBasePage {
 
     public RegistrationPage registerInTheForm() {
         type(username, "Leyla");
-        type(email, "test123@gmail.com");
-        type(password, "passwordTest765");
-        type(confirmPassword, "passwordTest765");
+        type(email, System.getProperty("email"));
+        type(password, System.getProperty("password"));
+        type(confirmPassword, System.getProperty("password"));
         type(birthdate, "03.03.2024");
         clickElement(languageLevelList);
         clickElement(languageLevel);
@@ -67,11 +67,6 @@ public class RegistrationPage extends AbsBasePage {
         String expectedEmail = "Электронная почта: test123@gmail.com";
         String expectedBirthdate = "Дата рождения: 2024-03-03";
         String expectedLangLevel = "Уровень языка: intermediate";
-
-        String actualName = output.getAttribute("output");
-        String actualMail = output.getAttribute("output");
-        String actualBirthdate = output.getAttribute("output");
-        String actualLangLevel = output.getAttribute("output");
 
         Assert.assertTrue("User name is incorrect", outputText.contains(expectedName));
         Assert.assertTrue("Email is incorrect", outputText.contains(expectedEmail));

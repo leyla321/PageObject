@@ -33,7 +33,7 @@ public class MainPageTest {
     @Test
     public void registration() throws DriverNotFoundException, MalformedURLException {
         RegistrationPage registrationPage = new RegistrationPage(driver);
-        registrationPage.open("");
+        registrationPage.open();
         registrationPage
                 .registerInTheForm()
                 .passwordValidation()

@@ -15,9 +15,9 @@ public abstract class AbsBasePage extends AbsCommon {
         super(driver);
     }
 
-    public AbsBasePage open(String path) {
+    public AbsBasePage open() {
         BASE_URL = BASE_URL.endsWith("/") ? BASE_URL.substring(0, BASE_URL.length() - 1) : BASE_URL;
-        driver.get(BASE_URL + path);
+        driver.get(BASE_URL);
 
         return this;
     }
