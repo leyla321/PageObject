@@ -9,13 +9,15 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <mvn.compiler.plugin.version>3.13.0</mvn.compiler.plugin.version>
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <webdrivermanager.version>5.9.2</webdrivermanager.version>
         <selenium.java.version>4.26.0</selenium.java.version>
         <junit.version>5.11.3</junit.version>
+        <log4j.core.version>3.0.0-beta3</log4j.core.version>
         <log4j.version>2.20.0</log4j.version>
         <assertj.version>3.26.3</assertj.version>
         <faker.version>1.0.2</faker.version>
@@ -24,6 +26,7 @@
         <compiler.version>3.13.0</compiler.version>
         <browser>chrome</browser>
         <base.url>https://otus.home.kartushin.su/form.html</base.url>
+        <gridUrl>http://193.104.57.173/wd/hub</gridUrl>
     </properties>
 
     <dependencies>
@@ -92,6 +95,9 @@
                     <systemPropertyVariables>
                         <browser.name>${browser}</browser.name>
                         <base.url>${base.url}</base.url>
+                        <browser.version>124.0</browser.version>
+                        <waiter.timeout>10</waiter.timeout>
+                        <gridUrl>${gridUrl}</gridUrl>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
