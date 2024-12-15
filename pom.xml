@@ -25,6 +25,7 @@
         <surefire.version>3.5.2</surefire.version>
         <compiler.version>3.13.0</compiler.version>
         <browser>chrome</browser>
+        <browser.version>124.0</browser.version>
         <base.url>https://otus.home.kartushin.su/form.html</base.url>
         <gridUrl>http://193.104.57.173/wd/hub</gridUrl>
     </properties>
